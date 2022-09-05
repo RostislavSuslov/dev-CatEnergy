@@ -73,7 +73,8 @@
 
 body {
 	font-family: $font-primary;
-	color: #333;
+	color: $text;
+    line-height: $line-height;
 	background-color: #fff;
 	overflow-x: hidden;
 	display: flex;
@@ -132,12 +133,13 @@ body {
 
 /*2*/
 ::selection {
-    color: #000;
-    background: $secondary-color;
+    color: #fff;
+    background: $primary-color;
 }
 
 a {
     color: $primary-color;
+    text-decoration: none;
 
     &:hover {
         text-decoration: underline;
@@ -206,11 +208,16 @@ ul {
 
 /*5-6*/
 
-.font-weight-light {
-    font-weight: lighter;
+.font-weight-normal {
+    font-weight: 400;
 }
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
 .font-weight-bold {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /*7-8*/
@@ -220,49 +227,59 @@ h3,
 h4,
 h5,
 h6,
-.title_1,
-.title_2,
-.title_3,
-.title_4,
-.title_5,
-.title_6 {
-    line-height: 1.4;
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5,
+.title-6 {
+    line-height: 1;
     color: #000;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: 'Oswald-Regular';
 }
 
 h1,
-.title_1 {
-    font-size: 46px;
+.title-1 {
+    font-size: 60px;
 }
 
 h2,
-.title_2 {
-    font-size: 30px;
+.title-2 {
+    font-size: 36px;
 }
 
 h3,
-.title_3 {
-    font-size: 20px;
+.title-3 {
+    font-size: 24px;
 }
 
 h4,
-.title_4 {
-    font-size: 18px;
+.title-4 {
+    font-size: 20px;
 }
 
 h5,
-.title_5 {
-    font-size: 16px;
+.title-5 {
+    font-size: 18px;
 }
 
 h6,
-.title_6 {
-    font-size: 14px;
+.title-6 {
+    font-size: 17px;
 }
 
 
 /*9*/
+input[type="checkbox"] {
+    + label {
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: $font-secondary;
+    }
+} 
+
+
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -283,12 +300,11 @@ input[type="radio"] {
             display: inline-block;
             vertical-align: middle;
             cursor: pointer;
-            margin-right: 19px;
-            width: 16px;
-            height: 16px;
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
             background-color: #ffffff;
-            border: 1px solid #ededed;
-            border-radius: 2px;
+            border: 1px solid #CDCDCD;
         }
     }
 }
@@ -301,9 +317,8 @@ input[type=radio]+label:before {
 
 input[type=radio]:checked+label:before {
     border-radius: 50%;
-    background: url(assets/img/radio.png) center no-repeat;
-    background-size: contain;
-    border: 1px solid transparent;
+    background: url(assets/img/radio.svg) center no-repeat;
+
 }
 
 
@@ -312,9 +327,7 @@ input:checked+label {
 
     &:before {
         content: '';
-        background: url(assets/img/checkbox.png) center no-repeat;
-        background-size: contain;
-        border: 1px solid transparent;
+        background: url(assets/img/checkbox.svg) center/18px no-repeat;
     }
 }
 
@@ -424,7 +437,7 @@ input:checked+label {
     border: 0px solid #f9f9f9;
     border-radius: 5px;
     &:hover {
-        background-color: #41a6f4;
+        background-color: #8ada59;
 
     }
 }
