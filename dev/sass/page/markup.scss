@@ -338,47 +338,67 @@ input:checked+label {
 
 .btn {
     display: inline-block;
-    padding: 12.5px 29px;
-    font-size: 14px;
-    font-weight: 700;
+    
+    font-weight: 400;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    line-height: 1.5;
-    border-radius: 4px;
+ 
+ 
+
+    
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding: 16px 26px;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid transparent;
+    &:hover {
+        color: #FFFFFF;
+        border: 1px solid transparent;
+        text-decoration: none;
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+
+    &:active {
+        color: #ffffff4d;
+       
+        &:focus{
+            box-shadow: none;
+        }
+    }
 }
 
 .btn-primary {
-    padding: 11px 29px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #060606;
-    background-color: #fec22d;
+    background-color: $primary-color;
+    color: #FFFFFF;
 
     &:hover {
-        color: #060606;
-        background-color: $secondary-color;
-        border-color: $secondary-color;
+        background-color: $primary-color-hover;
+        border: 1px solid transparent;
     }
+
 }
 
 .btn-secondary {
     color: #fff;
-    background-color: $primary-color;
+    background-color: blue;
 
     &:hover {
-        background-color: #41a6f4;
-        border-color: #41a6f4;
+        background-color: #ff0;
+        border-color: #ff0;
+        color: #000;
     }
 }
 
 .btn-success {
     color: $primary-color;
-    background-color: transparent;
-    border: 2px solid transparent;
+    background-color: rgb(69, 167, 197);
+    color: #ff0;
     border-color: $primary-color;
 
     &:hover {
@@ -389,14 +409,14 @@ input:checked+label {
 
 .btn-danger {
     color: #fff;
-    background-color: transparent;
-    border: 2px solid transparent;
-    border-color: #fff;
+    background-color: red;
+    
+   
 
     &:hover {
         color: #0c0c0c;
         background-color: #fff;
-        border-color: #fff;
+        background-color: rgb(172, 41, 41);
     }
 }
 
