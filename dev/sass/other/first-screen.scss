@@ -1,0 +1,43 @@
+.first-screen {
+    padding-top: 223px;
+    margin-top: -111px;
+    background-color: rgba(0, 255, 255, 0.274);
+    background: url(assets/img/first-screen.png) calc(50% + 114px) 155px no-repeat;
+    position: relative;
+    margin-bottom: $section-margin;
+    &::before {
+        content: "";
+        width: 50vw;
+        height: 100%;
+        background: url(assets/img/first-screen-before.png) no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    > .container {
+        padding: 0 80px;
+        min-height: 470px;
+    }
+
+    &__title {
+        max-width: 414px;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+       @extend .title-4;
+       margin-bottom: 52px;
+    }
+    
+}
+
+.second-screen,
+.second-href{
+    background-color: red;
+    min-width: 991px;
+    width: 100%;
+    max-width: 1440px;
+     
+}
